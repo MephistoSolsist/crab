@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Controller</title>
+</head>
+
+<body>
+    <button onclick="addNow()">通知现在</button>
+    <button onclick="food2()">无饲料</button>
+    <button onclick="food1()">有饲料</button>
+    <button onclick="rubbish1()">无垃圾</button>
+    <button onclick="rubbish2()">有垃圾</button>
+    <script>
+        let port = "5050"
+        let api = "http://127.0.0.1:" + port + "/"
+        function addNow() {
+            axios.get(api + 'add'
+            ).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+        function rubbish1() {
+            axios.get(api + 'rubbish1'
+            ).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+        function rubbish2() {
+            axios.get(api + 'rubbish2'
+            ).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+        function food1() {
+            axios.get(api + 'food1'
+            ).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+        function food2() {
+            axios.get(api + 'food2'
+            ).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+    </script>
+</body>
+
+</html>
