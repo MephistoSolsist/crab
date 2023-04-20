@@ -38,7 +38,7 @@ def rubbish2():
 
 @app.route('/get', methods=["GET","POST"])
 def get():
-    return list
+    return jsonify(list)
 
 @app.route('/take', methods=["POST"])
 def take():

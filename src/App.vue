@@ -51,7 +51,6 @@ export default {
             document.getElementById('rubbish').setAttribute('style', 'background-color:red')
             this.rubbish_text = "需要清理"
           }
-          console.log(res.data)
         }
       )
       getList().then(
@@ -72,7 +71,6 @@ export default {
       let count = () => {
         if (this.timeList.length != 0) {
           let dateDiff=1000*60*30-(new Date().getTime()-this.timeList[0].getTime())
-          console.log(dateDiff)
           var minutes = parseInt(dateDiff/1000/60)
           var seconds = parseInt(dateDiff/1000- minutes*60)
           this.time_left=minutes+"分"+seconds+"秒"
